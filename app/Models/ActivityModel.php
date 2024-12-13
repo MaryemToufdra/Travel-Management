@@ -12,7 +12,6 @@ class ActivityModel extends Model
 
     public function getAllActivitiesWithCategory()
     {
-        // Requête pour récupérer les activités avec les catégories
         $builder = $this->builder();
         $builder->select('activities.*, categories.name as category_name');
         $builder->join('categories', 'categories.id = activities.category_id', 'left');

@@ -43,6 +43,8 @@ class Autoload extends AutoloadConfig
         APP_NAMESPACE => APPPATH,
         'App\Libraries' => APPPATH . 'libraries',
         'Monolog'     => APPPATH .'logs',
+        'Stripe' => APPPATH . '../vendor/stripe/stripe-php/lib',
+        
     ];
 
     /**
@@ -79,8 +81,9 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $files = [];
-
+    public $files = [
+        ROOTPATH . 'vendor/autoload.php', // Ajout de l'autoloader de Composer
+    ];
     /**
      * -------------------------------------------------------------------
      * Helpers

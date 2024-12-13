@@ -9,14 +9,16 @@
         <p>Aucun voyage trouvé.</p>
     <?php else: ?>
         <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped table-sm">
-                <thead class="thead-dark bg-primary text-white">
+            <table class="table table-bordered table-hover table-striped table-sm" id="dataTable">
+                <thead class="text-black">
                     <tr>
                         <th>#</th>
                         <th>Title</th>
                         <th>Description</th>
-                        <th>Date de départ</th>
-                        <th>Date de retour</th>
+                        <th>Budget</th>
+                        <th>Max capacity</th>
+                        <th>departure date</th>
+                        <th>return date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -26,13 +28,15 @@
                             <td><?= $voyage['id'] ?></td>
                             <td><?= $voyage['titre'] ?></td>
                             <td><?= $voyage['description'] ?></td>
+                            <td><?= $voyage['budget'] ?> dh</td>
+                            <td><?= $voyage['nbr_max_personnes'] ?></td>
                             <td><?= date("Y-m-d", strtotime($voyage['date_depart'])) ?></td>
                             <td><?= date("Y-m-d", strtotime($voyage['date_retour'])) ?></td>
                             <td>
                                 <a href="/trips/edit/<?= $voyage['id'] ?>" class="btn btn-warning btn-sm">
                                     <i class="bi bi-pencil"></i> Edit
                                 </a>
-                                <a href="/trips/delete/<?= $voyage['id'] ?>" class="btn btn-danger btn-sm">
+                                <a href="/trips/delete/<?= $voyage['id'] ?>" class="btn btn-danger btn-sm" data-id="<?= $voyage['id'] ?>" onclick="confirmDelete(event, this)">
                                     <i class="bi bi-trash"></i> Delete
                                 </a>
                             </td>

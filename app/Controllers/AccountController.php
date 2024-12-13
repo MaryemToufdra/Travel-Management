@@ -2,29 +2,30 @@
 
 namespace App\Controllers;
 
-use App\Models\AccountModel;
+use App\Models\ParticipantModel;
 
 class AccountController extends BaseController
 {
     
     public function index()
     {
-        $accountModel = new AccountModel();
-        $data['account'] = $accountModel->getAllAccounts(); 
-        return view('/account/list', $data); 
+        $a = new ParticipantModel();
+        $donné['account'] = $a->getAllAccounts(); 
+        return view('/account/list', $donné); 
     }
-  
     public function delete($id)
     {
-        $accountModel = new AccountModel();
-        $account = $accountModel->find($id);
-        $donne = []; 
+        $a = new ParticipantModel();
+        $account = $a->find($id);
+    
         if ($account) {
-            $accountModel->delete($id);
-            $donne['success'] = 'trip deleted successfully.';
+            $a->delete($id);
+            return $this->response->setJSON(['success' => 'Account deleted successfully.']);
         } else {
-            $donne['error'] = 'trips not found .'; 
+            return $this->response->setJSON(['error' => 'Account not found.']);
         }
-        return view('account/', $donne);
     }
+    
+    
+    
 }

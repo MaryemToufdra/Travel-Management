@@ -20,17 +20,20 @@ class LoginController extends BaseController
         if (!$validation->withRequest($this->request)->run()) {
             return redirect()->back()->with('errors', $validation->getErrors());
         }
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
-        $userModel = new UserModel();
-        $user = $userModel->where('username', $username)->first();
-        if ($user && password_verify($password, $user['password'])) {
+        $nom = $this->request->getPost('username');
+        $motpass = $this->request->getPost('password');
+        $m = new UserModel();
+        $user = $m->where('username', $nom)->first();
+        if ($user && password_verify($motpass, $user['password'])) {
             session()->set('user_id', $user['id']);
             session()->set('username', $user['username']);
             session()->set('profile_image', $user['profile_image']);
+            session()->setFlashdata('success', 'Login successful!');
+        
             return redirect()->to('/accueil');
         }
-        return redirect()->to('/login')->with('error', 'Invalid username or password.');
+        session()->setFlashdata('error', 'Invalid username or password.');
+    return redirect()->to('/login');
     }
 }
 

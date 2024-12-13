@@ -10,17 +10,16 @@
 
 <div class="container my-5">
     <h1 class="text-center mb-4">Éditer une Activité</h1>
-
-    <!-- Affichage des erreurs de validation -->
-    <?php if (session()->getFlashdata('errors')): ?>
-        <div class="alert alert-danger">
-            <ul>
-                <?php foreach (session()->getFlashdata('errors') as $error): ?>
-                    <li><?= esc($error) ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
+    <script type="text/javascript">
+    <?php if (session()->getFlashdata('success')): ?>
+        alert('<?= session()->getFlashdata('success'); ?>');
     <?php endif; ?>
+    
+    <?php if (session()->getFlashdata('error')): ?>
+        alert('<?= session()->getFlashdata('error'); ?>');
+    <?php endif; ?>
+</script>
+
 
     <!-- Formulaire d'édition avec données pré-remplies -->
     <form action="/activities/update/<?= $activity['id']; ?>" method="POST" enctype="multipart/form-data">
@@ -49,12 +48,10 @@
                 <!-- Ajoutez ici d'autres catégories si nécessaire -->
             </select>
         </div>
-
-
         <button type="submit" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-secondary  " style="margin-left: 10px;" onclick="window.location.href='/accueil'">Cancel</button>
     </form>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 

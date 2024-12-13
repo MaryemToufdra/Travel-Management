@@ -10,27 +10,27 @@ class ProfileController extends BaseController
     if (!session()->get('user_id')) {
         return redirect()->to('/login');
     }
-    $username = $this->request->getPost('username');
-    $password = $this->request->getPost('password');
-    $profileImage = $this->request->getFile('profile_image');
-    $userModel = new UserModel();
-    $user = $userModel->find(session()->get('user_id'));
-    if ($username) {
-        $user['username'] = $username;
+    $nom = $this->request->getPost('username');
+    $mp = $this->request->getPost('password');
+    $image = $this->request->getFile('profile_image');
+    $utilisateur = new UserModel();
+    $user = $utilisateur->find(session()->get('user_id'));
+    if ($nom) {
+        $user['username'] = $nom;
     }
-    if ($password) {
-        $user['password'] = password_hash($password, PASSWORD_DEFAULT);
+    if ($mp) {
+        $user['password'] = password_hash($mp, PASSWORD_DEFAULT);
     }
-    if ($profileImage && $profileImage->isValid()) {
-        $uploadPath = FCPATH . 'public/uploads/';
-        if (!is_dir($uploadPath)) {
-            mkdir($uploadPath, 0777, true);
+    if ($image && $image->isValid()) {
+        $up = FCPATH . 'public/uploads/';
+        if (!is_dir($up)) {
+            mkdir($up, 0777, true);
         }
-        $newName = $profileImage->getRandomName();
-        $profileImage->move($uploadPath, $newName);
-        $user['profile_image'] = $newName;
+        $a = $image->getRandomName();
+        $image->move($up, $a);
+        $user['profile_image'] = $a;
     }
-    $userModel->save($user);
+    $utilisateur->save($user);
     session()->set('username', $user['username']);
     session()->set('profile_image', $user['profile_image']); 
     $this->session->setFlashdata('success', 'Profile updated successfully!');

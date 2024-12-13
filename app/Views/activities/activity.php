@@ -1,19 +1,16 @@
 <div class="container my-5">
-    <div class="text-end mb-3">
-        <a href="/activities/create" class="btn btn-primary btn-sm btn1">
-            <i class="bi bi-plus-circle"></i> Add an Activity
-        </a>
-    </div>
+   
     <?php if (empty($activities)): ?>
         <p>No activities found.</p>
     <?php else: ?>
         <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped table-sm">
+            <table class="table table-bordered table-hover table-striped table-sm" id="dataTable">
                 <thead class="thead-dark bg-primary text-white">
                     <tr>
                         <th>#</th>
                         <th>Activity Name</th>
                         <th>Description</th>
+                        
                         <th>Date</th>
                         <th>Category</th>  <!-- Nouvelle colonne pour la catégorie -->
                         <th>Actions</th>
@@ -31,7 +28,7 @@
                                 <a href="/activities/edit/<?= $activity['id'] ?>" class="btn btn-warning btn-sm">
                                     <i class="bi bi-pencil"></i> Edit
                                 </a>
-                                <a href="/activities/delete/<?= $activity['id'] ?>" class="btn btn-danger btn-sm">
+                                <a href="/activities/delete/<?= $activity['id'] ?>" class="btn btn-danger btn-sm"  data-id="<?= $activity['id'] ?>" onclick="confirmDelete1(event, this)">
                                     <i class="bi bi-trash"></i> Delete
                                 </a>
                             </td>
