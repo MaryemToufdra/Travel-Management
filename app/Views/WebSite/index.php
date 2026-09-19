@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
 </head>
 
 <body>
@@ -41,53 +42,58 @@
         <?php endif; ?>
 
 </script>
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>TravelTogether</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex align-items-center justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="<?= base_url('index') ?>" class="nav-item nav-link active">Home</a>
-                    <a href="<?= base_url('about') ?>" class="nav-item nav-link">About</a>
-                    <a href="<?= base_url('service') ?>" class="nav-item nav-link">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="<?= base_url('booking') ?>" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="#destination-section" class="dropdown-item">Destination</a>
-                            <a href="<?= base_url('booking') ?>" class="dropdown-item">Booking</a>
-                            <a href="#trips-section" class="dropdown-item">Trips</a>
+            <div class="home-shell">
+                <nav class="home-navbar" aria-label="Main navigation">
+                    <div class="home-navbar__inner">
+                    <a href="" class="home-brand">
+                        <span class="home-brand__icon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></span>
+                        <span>TravelTogether</span>
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                    <button class="home-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                    </button>
+                    <div class="home-nav-menu collapse" id="navbarCollapse">
+                        <div class="home-nav-links">
+                            <a href="<?= base_url('index') ?>" class="home-nav-link active">Home</a>
+                            <a href="<?= base_url('about') ?>" class="home-nav-link">About</a>
+                            <a href="<?= base_url('service') ?>" class="home-nav-link">Services</a>
+                            <div class="home-nav-dropdown">
+                                <a href="<?= base_url('booking') ?>" class="home-nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="#destination-section" class="dropdown-item">Destination</a>
+                                    <a href="<?= base_url('booking') ?>" class="dropdown-item">Booking</a>
+                                    <a href="#trips-section" class="dropdown-item">Trips</a>
+                                </div>
+                            </div>
+                            <a href="<?= base_url('contact') ?>" class="home-nav-link">Contact</a>
+                        </div>
+                        <div class="home-nav-actions">
+                            <a href="<?= base_url('loginP') ?>" class="home-auth-link">Login</a>
+                            <a href="<?= base_url('signup') ?>" class="home-auth-button">Sign up</a>
+                            <div class="home-profile-dropdown dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <img src="<?= base_url('uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="<?= base_url('update-profile') ?>" class="dropdown-item">Update Profile</a>
+                                    <a href="<?= base_url('loginP') ?>" class="dropdown-item">Logout</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?= base_url('uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-            </a>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a href="<?= base_url('update-profile') ?>" class="dropdown-item">Update Profile</a>
-                <a href="<?= base_url('loginP') ?>" class="dropdown-item">Logout</a>
-            </div>
-            </div>
-        </nav>
+                    </div>
+                </nav>
 
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Vacation With Us</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Let us help you plan the trip of a lifetime with personalized recommendations</p>
-           
+                <div class="home-hero">
+                    <div class="home-hero__content">
+                        <p class="home-eyebrow">Your adventure starts here</p>
+                        <h1>Enjoy Your Vacation With Us</h1>
+                        <p>Let us help you plan the trip of a lifetime with personalized recommendations</p>
+                        <a class="home-hero__button" href="#trips-section">Explore trips</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
     <!-- Navbar & Hero End -->
 
 
@@ -376,6 +382,17 @@
     <script src="<?=base_url('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')?>"></script>
     <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
+    <script>
+        const homeNavToggle = document.querySelector('.home-nav-toggle');
+        const homeNavMenu = document.getElementById('navbarCollapse');
+
+        if (homeNavToggle && homeNavMenu) {
+            homeNavToggle.addEventListener('click', function () {
+                const isOpen = homeNavMenu.classList.toggle('is-open');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
 </body>
 
 </html>
