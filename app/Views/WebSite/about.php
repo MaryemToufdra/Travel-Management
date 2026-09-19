@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="<?= base_url('img/favicon.ico') ?>" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/lib/animate/animate.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/lib/owlcarousel/assets/owl.carousel.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
 </head>
 
 <body>
@@ -100,7 +100,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('public/img/about.jpg') ?>" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('img/about.jpg') ?>" alt="" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -240,22 +240,22 @@
                 <h4 class="text-white mb-3">Gallery</h4>
                 <div class="row g-2 pt-2">
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 1">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 1">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 2">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 2">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 3">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 3">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 4">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 4">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 5">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 5">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 6">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 6">
                     </div>
                 </div>
             </div>

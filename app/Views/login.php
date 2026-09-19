@@ -43,7 +43,7 @@
             </div>
             <div class="row">
           <div class="col-8">
-            <a href="/loginP">Go to Website</a>
+            <a href="<?= base_url('loginP') ?>">Go to Website</a>
           </div>
             <button type="submit">Login</button>
         </form>

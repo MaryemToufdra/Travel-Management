@@ -3,20 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Travel Together</title>
+    <title>TravelTogether</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="<?= base_url('img/favicon.ico') ?>" rel="icon">
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="<?= base_url('assets/lib/animate/animate.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/lib/owlcarousel/assets/owl.carousel.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
 </head>
 
 <body>
@@ -41,28 +50,28 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="/index" class="nav-item nav-link active">Home</a>
-                    <a href="/about" class="nav-item nav-link">About</a>
-                    <a href="/service" class="nav-item nav-link">Services</a>
+            <div class="collapse navbar-collapse d-flex align-items-center justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="<?= base_url('index') ?>" class="nav-item nav-link active">Home</a>
+                    <a href="<?= base_url('about') ?>" class="nav-item nav-link">About</a>
+                    <a href="<?= base_url('service') ?>" class="nav-item nav-link">Services</a>
                     <div class="nav-item dropdown">
-                        <a href="/booking" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
+                        <a href="<?= base_url('booking') ?>" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
                         <div class="dropdown-menu m-0">
                             <a href="#destination-section" class="dropdown-item">Destination</a>
-                            <a href="/booking" class="dropdown-item">Booking</a>
+                            <a href="<?= base_url('booking') ?>" class="dropdown-item">Booking</a>
                             <a href="#trips-section" class="dropdown-item">Trips</a>
                         </div>
                     </div>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
+                    <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="nav-item dropdown ms-3">
+                <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                <img src="<?= base_url('uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
             </a>
             <div class="dropdown-menu dropdown-menu-end">
-                <a href="/update-profile" class="dropdown-item">Update Profile</a>
-                <a href="/loginP" class="dropdown-item">Logout</a>
+                <a href="<?= base_url('update-profile') ?>" class="dropdown-item">Update Profile</a>
+                <a href="<?= base_url('loginP') ?>" class="dropdown-item">Logout</a>
             </div>
             </div>
         </nav>
@@ -88,7 +97,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('public/img/about.jpg') ?>" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('img/about.jpg') ?>" alt="" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -130,7 +139,7 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
             <h1 class="mb-5">Our Services</h1>
         </div>
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
@@ -231,11 +240,11 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
             <h1 class="mb-5">Popular Destinations</h1>
         </div>
-        <div class="row g-4">
+        <div class="row g-5">
             <?php foreach ($destinations as $destination): ?>
                 <div class="col-lg-4 col-md-6">
                     <a class="position-relative d-block overflow-hidden" href="">
-                        <img class="img-fluid img-size rounded" src="<?= base_url('public/uploads/' . $destination['images']) ?>" alt="<?= esc($destination['lieu_voyage']) ?>">
+                        <img class="img-fluid img-size rounded" src="<?= base_url('uploads/' . $destination['images']) ?>" alt="<?= esc($destination['lieu_voyage']) ?>">
                     </a>
                 </div>
             <?php endforeach; ?>
@@ -277,7 +286,7 @@
                         </div>
                         <p><?= esc($destination['description'])?></p>
                         <div class="d-flex justify-content-center mb-2">
-                            <a href="/book/<?= $destination['id'] ?>" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
+                            <a href="<?= base_url('book/' . $destination['id']) ?>" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -293,8 +302,8 @@
             <!-- Section Company -->
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Company</h4>
-                <a class="btn btn-link text-light" href="/about">About Us</a>
-                <a class="btn btn-link text-light" href="/contact">Contact Us</a>
+                <a class="btn btn-link text-light" href="<?= base_url('about') ?>">About Us</a>
+                <a class="btn btn-link text-light" href="<?= base_url('contact') ?>">Contact Us</a>
             </div>
 
             <!-- Section Contact -->
@@ -314,22 +323,22 @@
                 <h4 class="text-white mb-3">Gallery</h4>
                 <div class="row g-2 pt-2">
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 1">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 1">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 2">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 2">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 3">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 3">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 4">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 4">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 5">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 5">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 6">
+                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 6">
                     </div>
                 </div>
             </div>
@@ -344,7 +353,7 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="/home">TravelTogether</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="<?= base_url('home') ?>">TravelTogether</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!-- Optional footer links or information -->
