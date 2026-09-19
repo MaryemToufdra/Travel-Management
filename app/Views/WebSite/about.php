@@ -99,196 +99,172 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <main class="about-page__content">
+    <section class="container-xxl about-page__intro">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('img/about.jpg') ?>" alt="" style="object-fit: cover;">
+            <div class="row about-page__intro-row">
+                <div class="col-lg-6 about-page__intro-media wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-page__intro-image-wrap">
+                    <img class="about-page__intro-image" src="<?= base_url('img/about.jpg') ?>" alt="" loading="lazy" width="700" height="700">
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to <span class="text-primary">TravelTogether</span></h1>
-                    <p class="mb-4">Your adventure begins here! Explore unique destinations and enjoy exclusive experiences</p>
-                    <p class="mb-4"> Let us guide you through unforgettable trips with hand-picked services that cater to your every need</p>
-                    <div class="row gy-2 gx-4 mb-4">
+                <div class="col-lg-6 about-page__intro-content wow fadeInUp" data-wow-delay="0.3s">
+                    <p class="about-page__eyebrow">About Us</p>
+                    <h2>Welcome to <span>TravelTogether</span></h2>
+                    <p>Your adventure begins here! Explore unique destinations and enjoy exclusive experiences</p>
+                    <p> Let us guide you through unforgettable trips with hand-picked services that cater to your every need</p>
+                    <div class="about-page__features">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                            <p><i class="fa fa-check" aria-hidden="true"></i>First Class Flights</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                            <p><i class="fa fa-check" aria-hidden="true"></i>Handpicked Hotels</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                            <p><i class="fa fa-check" aria-hidden="true"></i>5 Star Accommodations</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                            <p><i class="fa fa-check" aria-hidden="true"></i>Latest Model Vehicles</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                            <p><i class="fa fa-check" aria-hidden="true"></i>150 Premium City Tours</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                            <p><i class="fa fa-check" aria-hidden="true"></i>24/7 Service</p>
                         </div>
                     </div>
                 </div>
-</div>
+            </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <section class="container-xxl about-page__team">
     <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Travel Guide</h6>
-            <h1 class="mb-5">Meet Our Guide</h1>
+        <div class="about-page__section-heading text-center wow fadeInUp" data-wow-delay="0.1s">
+            <p class="about-page__eyebrow">Travel Guide</p>
+            <h2>Meet Our Guide</h2>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="<?= base_url('public/img/team-1.jpg') ?>" alt="">
+        <div class="about-page__team-grid">
+            <article class="about-page__team-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-page__team-image-wrap">
+                        <img src="<?= base_url('public/img/team-1.jpg') ?>" alt="" loading="lazy" width="600" height="600">
                     </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    <div class="about-page__team-socials">
+                        <a href="" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">John Doe</h5>
+                    <div class="about-page__team-info">
+                        <h3>John Doe</h3>
                         <small>Senior Travel Guide</small>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="<?= base_url('public/img/team-2.jpg') ?>" alt="">
+            </article>
+            <article class="about-page__team-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="about-page__team-image-wrap">
+                        <img src="<?= base_url('public/img/team-2.jpg') ?>" alt="" loading="lazy" width="600" height="600">
                     </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    <div class="about-page__team-socials">
+                        <a href="" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Jane Smith</h5>
+                    <div class="about-page__team-info">
+                        <h3>Jane Smith</h3>
                         <small>Local Expert</small>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="<?= base_url('public/img/team-3.jpg') ?>" alt="">
+            </article>
+            <article class="about-page__team-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="about-page__team-image-wrap">
+                        <img src="<?= base_url('public/img/team-3.jpg') ?>" alt="" loading="lazy" width="600" height="600">
                     </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    <div class="about-page__team-socials">
+                        <a href="" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Robert Brown</h5>
+                    <div class="about-page__team-info">
+                        <h3>Robert Brown</h3>
                         <small>Adventure Specialist</small>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="<?= base_url('public/img/team-4.jpg') ?>" alt="">
+            </article>
+            <article class="about-page__team-card wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="about-page__team-image-wrap">
+                        <img src="<?= base_url('public/img/team-4.jpg') ?>" alt="" loading="lazy" width="600" height="600">
                     </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    <div class="about-page__team-socials">
+                        <a href="" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Emily Johnson</h5>
+                    <div class="about-page__team-info">
+                        <h3>Emily Johnson</h3>
                         <small>Travel Coordinator</small>
                     </div>
-                </div>
-            </div>
+            </article>
         </div>
     </div>
-</div>
+    </section>
+    </main>
 
     <!-- Team End -->
         
 
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <!-- Section Company -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Company</h4>
-                <a class="btn btn-link text-light" href="/about">About Us</a>
-                <a class="btn btn-link text-light" href="/contact">Contact Us</a>
-            </div>
-
-            <!-- Section Contact -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Agadir, Morocco</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+212 0709606308</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>maryem.toufdra@gmail.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://youtube.com/yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Gallery</h4>
-                <div class="row g-2 pt-2">
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 1">
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <section class="site-footer__column">
+                    <h2>Company</h2>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                    <div class="site-footer__contact">
+                        <h2>Contact</h2>
+                        <p><i class="fa fa-map-marker-alt" aria-hidden="true"></i>Agadir, Morocco</p>
+                        <p><i class="fa fa-phone-alt" aria-hidden="true"></i>+212 0709606308</p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i>maryem.toufdra@gmail.com</p>
                     </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 2">
+                    <div class="site-footer__socials">
+                        <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://youtube.com/yourprofile" target="_blank" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 3">
+                </section>
+                <section class="site-footer__column">
+                    <h2>Quick Links</h2>
+                    <a href="/home">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                </section>
+                <section class="site-footer__column">
+                    <h2>Services</h2>
+                    <a href="/service">Services</a>
+                    <a href="/booking">Booking</a>
+                    <a href="home#destination-section">Destination</a>
+                    <a href="home#trips-section">Trips</a>
+                </section>
+                <section class="site-footer__column">
+                    <h2>Gallery</h2>
+                    <div class="site-footer__gallery">
+                        <img loading="lazy" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 1">
+                        <img loading="lazy" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 2">
+                        <img loading="lazy" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 3">
+                        <img loading="lazy" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 4">
+                        <img loading="lazy" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 5">
+                        <img loading="lazy" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 6">
                     </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 4">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 5">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 6">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section Newsletter -->
-         
-        </div>
-    </div>
-
-    <!-- Section Copyright -->
-    <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="/home">TravelTogether</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!-- Optional footer links or information -->
-                </div>
+                </section>
             </div>
         </div>
-    </div>
-</div>
+        <div class="site-footer__copyright">
+            <div class="site-footer__copyright-inner">
+                <span>&copy; <a href="/home">TravelTogether</a>, All Right Reserved.</span>
+            </div>
+        </div>
+    </footer>
 
-
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -303,6 +279,17 @@
     <script src="<?=base_url('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')?>"></script>
     <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
+    <script>
+        const homeNavToggle = document.querySelector('.home-nav-toggle');
+        const homeNavMenu = document.getElementById('navbarCollapse');
+
+        if (homeNavToggle && homeNavMenu) {
+            homeNavToggle.addEventListener('click', function () {
+                const isOpen = homeNavMenu.classList.toggle('is-open');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
 </body>
 
 </html>
