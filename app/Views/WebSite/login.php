@@ -4,49 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/style2.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
+    <link rel="stylesheet" href="<?= base_url('assets/css/auth.css') ?>">
 </head>
 <body>
-    <div class="login-container">
-        <h1 class="title">Login</h1>
-        
-        <!-- Bloc d'alerte d'erreur -->
-        <?php if (session()->getFlashdata('error')): ?>
-            <div class="alert alert-danger alert-dismissible fade show shadow-sm mb-3" role="alert" style="border-left: 5px solid #dc3545;">
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-exclamation-circle-fill me-2" style="font-size: 1.5rem; color: #dc3545;"></i>
-                    <div>
-                        <?= session()->getFlashdata('error') ?>
-                    </div>
+    <main class="auth-page auth-page--participant">
+        <section class="auth-panel auth-panel--form">
+            <div class="login-container">
+                <div class="brand-mark" aria-hidden="true">
+                    <span>+</span>
                 </div>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
+                <p class="auth-eyebrow">Your next adventure</p>
+                <h1 class="auth-title">Welcome back</h1>
+                <p class="auth-intro">Sign in to discover beautiful destinations and manage your bookings.</p>
 
-        <form class="login-form" method="POST" action="<?= site_url('/seconnecter') ?>">
-            <?= csrf_field() ?>
-            <div class="input-group mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" id="email" name="email" class="form-control" placeholder="Enter your Email">
-            </div>
-            <div class="input-group mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="auth-alert" role="alert">
+                        <div class="auth-alert__content">
+                            <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                            <div>
+                                <?= session()->getFlashdata('error') ?>
+                            </div>
+                        </div>
+                        <button type="button" class="auth-alert__close" aria-label="Close message">&times;</button>
+                    </div>
+                <?php endif; ?>
 
-        <div class="signup-link mt-3">
-            <p>Don't have an account? <a href="/signup">Sign up</a></p>
-        </div>  
+                <form class="login-form" method="POST" action="<?= site_url('/seconnecter') ?>">
+                    <?= csrf_field() ?>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <div class="input-control">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your Email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-control">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                            <button type="button" class="password-toggle" aria-label="Show password" aria-controls="password" aria-pressed="false">
+                                <span aria-hidden="true">Show</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="login-button" type="submit">Login</button>
+                </form>
 
-        <div class="images mt-4 text-center">
-            <img src="<?= base_url('public/uploads/globe.png') ?>" alt="Plane Icon" class="plane-icon me-2" style="width: 50px;">
-            <img src="<?= base_url('public/uploads/travel-insurance.png') ?>" alt="Suitcase Icon" class="suitcase-icon" style="width: 50px;">
-        </div>
-    </div>
+                <p class="auth-switch">
+                    Don't have an account?
+                    <a href="<?= site_url('/signup') ?>">Sign up</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="auth-panel auth-panel--image auth-panel--image-participant" aria-label="Moroccan travel destinations">
+            <div class="auth-panel__overlay"></div>
+            <div class="auth-panel__content">
+                <p class="auth-eyebrow">Explore Morocco</p>
+                <h2>Collect places, not just plans.</h2>
+                <p>From the colors of Marrakech to the shores of Agadir, your next story starts here.</p>
+                <div class="destination-pills" aria-hidden="true">
+                    <span>Marrakech</span>
+                    <span>Agadir</span>
+                    <span>Fes</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const passwordToggle = document.querySelector('.password-toggle');
+        const alertClose = document.querySelector('.auth-alert__close');
+
+        passwordToggle.addEventListener('click', function () {
+            const isPasswordVisible = passwordInput.type === 'text';
+            passwordInput.type = isPasswordVisible ? 'password' : 'text';
+            this.setAttribute('aria-label', isPasswordVisible ? 'Show password' : 'Hide password');
+            this.setAttribute('aria-pressed', String(!isPasswordVisible));
+            this.querySelector('i').className = isPasswordVisible ? 'fas fa-eye' : 'fas fa-eye-slash';
+        });
+
+        if (alertClose) {
+            alertClose.addEventListener('click', function () {
+                this.closest('.auth-alert').remove();
+            });
+        }
+    </script>
 </body>
 </html>
