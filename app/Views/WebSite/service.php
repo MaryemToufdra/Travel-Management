@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
 
 
 
@@ -37,258 +38,195 @@
         </div>
     </div>
   
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>TravelTogether</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="/home" class="nav-item nav-link">Home</a>
-                    <a href="/about" class="nav-item nav-link">About</a>
-                    <a href="/service" class="nav-item nav-link active">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="/booking" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="home#destination-section" class="dropdown-item">Destination</a>
-                            <a href="/booking" class="dropdown-item">Booking</a>
-                            <a href="home#trips-section" class="dropdown-item">Trips</a>
-                                                   </div>
-                    </div>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="nav-item dropdown ms-3">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-            </a>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a href="/update-profile" class="dropdown-item">Update Profile</a>
-                <a href="loginP" class="dropdown-item">Logout</a>
-            </div>
-            </div>
-        </nav>
-
-
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Services</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
-                            </ol>
-                        </nav>
+    <div class="services-page">
+        <div class="home-shell">
+            <nav class="home-navbar" aria-label="Main navigation">
+                <div class="home-navbar__inner">
+                    <a href="" class="home-brand">
+                        <span class="home-brand__icon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></span>
+                        <span>TravelTogether</span>
+                    </a>
+                    <button class="home-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                    </button>
+                    <div class="home-nav-menu collapse" id="navbarCollapse">
+                        <div class="home-nav-links">
+                            <a href="/home" class="home-nav-link">Home</a>
+                            <a href="/about" class="home-nav-link">About</a>
+                            <a href="/service" class="home-nav-link active">Services</a>
+                            <div class="home-nav-dropdown">
+                                <a href="/booking" class="home-nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="home#destination-section" class="dropdown-item">Destination</a>
+                                    <a href="/booking" class="dropdown-item">Booking</a>
+                                    <a href="home#trips-section" class="dropdown-item">Trips</a>
+                                </div>
+                            </div>
+                            <a href="/contact" class="home-nav-link">Contact</a>
+                        </div>
+                        <div class="home-nav-actions">
+                            <a href="<?= base_url('loginP') ?>" class="home-auth-link">Login</a>
+                            <a href="<?= base_url('signup') ?>" class="home-auth-button">Sign up</a>
+                            <div class="home-profile-dropdown dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="/update-profile" class="dropdown-item">Update Profile</a>
+                                    <a href="loginP" class="dropdown-item">Logout</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </nav>
+
+            <header class="services-page__hero">
+                <div class="services-page__hero-content">
+                    <p class="services-page__eyebrow">Travel with confidence</p>
+                    <h1>Services</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="services-page__breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li aria-current="page">Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </header>
         </div>
     </div>
     <!-- Navbar & Hero End -->
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <main class="services-page__content">
+    <section class="container-xxl services-page__services">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h1 class="mb-5">Our Services</h1>
+            <div class="services-page__section-heading text-center wow fadeInUp" data-wow-delay="0.1s">
+                <p class="services-page__eyebrow">Services</p>
+                <h2>Our Services</h2>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="services-page__grid">
+                <article class="services-section__card services-page__card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="services-section__icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                    <h3>WorldWide Tours</h3>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </article>
+                <article class="services-section__card services-page__card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="services-section__icon"><i class="fa fa-hotel" aria-hidden="true"></i></div>
+                    <h3>Hotel Reservation</h3>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </article>
+                <article class="services-section__card services-page__card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="services-section__icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    <h3>Travel Guides</h3>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </article>
+                <article class="services-section__card services-page__card wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="services-section__icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                    <h3>Event Management</h3>
+                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Service End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <section class="container-xxl services-page__testimonials wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Clients Say!!!</h1>
+            <div class="services-page__section-heading text-center">
+                <p class="services-page__eyebrow">Testimonial</p>
+                <h2>Our Clients Say!!!</h2>
             </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="<?= base_url('public/img/testimonial-1.jpg') ?>" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
+            <div class="services-page__testimonial-grid">
+                <article class="services-page__testimonial-card">
+                    <img src="<?= base_url('public/img/testimonial-1.jpg') ?>" alt="" loading="lazy" width="80" height="80">
+                    <h3>John Doe</h3>
                     <p>New York, USA</p>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="<?= base_url('public/img/testimonial-2.jpg') ?>" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </article>
+                <article class="services-page__testimonial-card">
+                    <img src="<?= base_url('public/img/testimonial-2.jpg') ?>" alt="" loading="lazy" width="80" height="80">
+                    <h3>John Doe</h3>
                     <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="<?= base_url('public/img/testimonial-3.jpg') ?>" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </article>
+                <article class="services-page__testimonial-card">
+                    <img src="<?= base_url('public/img/testimonial-3.jpg') ?>" alt="" loading="lazy" width="80" height="80">
+                    <h3>John Doe</h3>
                     <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="<?= base_url('public/img/testimonial-4.jpg') ?>" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </article>
+                <article class="services-page__testimonial-card">
+                    <img src="<?= base_url('public/img/testimonial-4.jpg') ?>" alt="" loading="lazy" width="80" height="80">
+                    <h3>John Doe</h3>
                     <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
+    </main>
     <!-- Testimonial End -->
         
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <!-- Section Company -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Company</h4>
-                <a class="btn btn-link text-light" href="/about">About Us</a>
-                <a class="btn btn-link text-light" href="/contact">Contact Us</a>
-            </div>
-
-            <!-- Section Contact -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Agadir, Morocco</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+212 0709606308</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>maryem.toufdra@gmail.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://youtube.com/yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Gallery</h4>
-                <div class="row g-2 pt-2">
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 1">
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <section class="site-footer__column">
+                    <h2>Company</h2>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                    <div class="site-footer__contact">
+                        <h2>Contact</h2>
+                        <p><i class="fa fa-map-marker-alt" aria-hidden="true"></i>Agadir, Morocco</p>
+                        <p><i class="fa fa-phone-alt" aria-hidden="true"></i>+212 0709606308</p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i>maryem.toufdra@gmail.com</p>
                     </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 2">
+                    <div class="site-footer__socials">
+                        <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://youtube.com/yourprofile" target="_blank" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 3">
+                </section>
+                <section class="site-footer__column">
+                    <h2>Quick Links</h2>
+                    <a href="/home">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                </section>
+                <section class="site-footer__column">
+                    <h2>Services</h2>
+                    <a href="/service">Services</a>
+                    <a href="/booking">Booking</a>
+                    <a href="home#destination-section">Destination</a>
+                    <a href="home#trips-section">Trips</a>
+                </section>
+                <section class="site-footer__column">
+                    <h2>Gallery</h2>
+                    <div class="site-footer__gallery">
+                        <img loading="lazy" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 1">
+                        <img loading="lazy" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 2">
+                        <img loading="lazy" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 3">
+                        <img loading="lazy" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 4">
+                        <img loading="lazy" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 5">
+                        <img loading="lazy" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 6">
                     </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-2.jpg') ?>" alt="Gallery image 4">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-3.jpg') ?>" alt="Gallery image 5">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('public/img/package-1.jpg') ?>" alt="Gallery image 6">
-                    </div>
-                </div>
-            </div>
-
-       
-        </div>
-    </div>
-
-    <!-- Section Copyright -->
-    <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="/home">TravelTogether</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!-- Optional footer links or information -->
-                </div>
+                </section>
             </div>
         </div>
-    </div>
-</div>
+        <div class="site-footer__copyright">
+            <div class="site-footer__copyright-inner">
+                <span>&copy; <a href="/home">TravelTogether</a>, All Right Reserved.</span>
+            </div>
+        </div>
+    </footer>
 
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -304,6 +242,17 @@
     <script src="<?=base_url('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')?>"></script>
     <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
+    <script>
+        const homeNavToggle = document.querySelector('.home-nav-toggle');
+        const homeNavMenu = document.getElementById('navbarCollapse');
+
+        if (homeNavToggle && homeNavMenu) {
+            homeNavToggle.addEventListener('click', function () {
+                const isOpen = homeNavMenu.classList.toggle('is-open');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
 
 
 </body>
