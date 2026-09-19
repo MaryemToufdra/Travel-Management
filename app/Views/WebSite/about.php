@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
 </head>
 
 <body>
@@ -37,58 +38,61 @@
     </div>
     
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>TravelTogether</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="/home" class="nav-item nav-link">Home</a>
-                    <a href="/about" class="nav-item nav-link active">About</a>
-                    <a href="/service" class="nav-item nav-link">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="/booking" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="home#destination-section" class="dropdown-item">Destination</a>
-                            <a href="/booking" class="dropdown-item">Booking</a>
-                           
-                            <a href="home#trips-section" class="dropdown-item">Trips</a>
+    <div class="about-page">
+        <div class="home-shell">
+            <nav class="home-navbar" aria-label="Main navigation">
+                <div class="home-navbar__inner">
+                    <a href="" class="home-brand">
+                        <span class="home-brand__icon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></span>
+                        <span>TravelTogether</span>
+                    </a>
+                    <button class="home-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                    </button>
+                    <div class="home-nav-menu collapse" id="navbarCollapse">
+                        <div class="home-nav-links">
+                            <a href="/home" class="home-nav-link">Home</a>
+                            <a href="/about" class="home-nav-link active">About</a>
+                            <a href="/service" class="home-nav-link">Services</a>
+                            <div class="home-nav-dropdown">
+                                <a href="/booking" class="home-nav-link dropdown-toggle" data-bs-toggle="dropdown">Booking</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="home#destination-section" class="dropdown-item">Destination</a>
+                                    <a href="/booking" class="dropdown-item">Booking</a>
+                                    <a href="home#trips-section" class="dropdown-item">Trips</a>
+                                </div>
+                            </div>
+                            <a href="/contact" class="home-nav-link">Contact</a>
+                        </div>
+                        <div class="home-nav-actions">
+                            <a href="<?= base_url('loginP') ?>" class="home-auth-link">Login</a>
+                            <a href="<?= base_url('signup') ?>" class="home-auth-button">Sign up</a>
+                            <div class="home-profile-dropdown dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="/update-profile" class="dropdown-item">Update Profile</a>
+                                    <a href="loginP" class="dropdown-item">Logout</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="nav-item dropdown ms-3">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-            </a>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a href="/update-profile" class="dropdown-item">Update Profile</a>
-                <a href="loginP" class="dropdown-item">Logout</a>
-            </div>
-            </div>
-        </nav>
+            </nav>
 
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">About Us</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">About</li>
-                            </ol>
-                        </nav>
-                    </div>
+            <header class="about-page__hero">
+                <div class="about-page__hero-content">
+                    <p class="about-page__eyebrow">Discover TravelTogether</p>
+                    <h1>About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="about-page__breadcrumb">
+                            <li><a href="/home">Home</a></li>
+                            <li aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
                 </div>
-            </div>
+            </header>
         </div>
     </div>
     <!-- Navbar & Hero End -->

@@ -98,37 +98,39 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl about-section">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('img/about.jpg') ?>" alt="" style="object-fit: cover;">
+            <div class="row about-section__row">
+                <div class="col-lg-6 about-section__media wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-section__image-wrap">
+                        <img class="about-section__image" src="<?= base_url('img/about.jpg') ?>" alt="" loading="lazy" width="700" height="700">
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to <span class="text-primary">TravelTogether</span></h1>
-                    <p class="mb-4">Your adventure begins here! Explore unique destinations and enjoy exclusive experiences</p>
-                    <p class="mb-4"> Let us guide you through unforgettable trips with hand-picked services that cater to your every need</p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                <div class="col-lg-6 about-section__content wow fadeInUp" data-wow-delay="0.3s">
+                    <p class="about-section__eyebrow">About Us</p>
+                    <h1 class="about-section__title">Welcome to <span>TravelTogether</span></h1>
+                    <div class="about-section__copy">
+                        <p>Your adventure begins here! Explore unique destinations and enjoy exclusive experiences</p>
+                        <p> Let us guide you through unforgettable trips with hand-picked services that cater to your every need</p>
+                    </div>
+                    <div class="about-section__features">
+                        <div class="about-section__feature">
+                            <p><i class="fa fa-check" aria-hidden="true"></i>First Class Flights</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                        <div class="about-section__feature">
+                            <p><i class="fa fa-check" aria-hidden="true"></i>Handpicked Hotels</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                        <div class="about-section__feature">
+                            <p><i class="fa fa-check" aria-hidden="true"></i>5 Star Accommodations</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                        <div class="about-section__feature">
+                            <p><i class="fa fa-check" aria-hidden="true"></i>Latest Model Vehicles</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                        <div class="about-section__feature">
+                            <p><i class="fa fa-check" aria-hidden="true"></i>150 Premium City Tours</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                        <div class="about-section__feature">
+                            <p><i class="fa fa-check" aria-hidden="true"></i>24/7 Service</p>
                         </div>
                     </div>
                 </div>
@@ -139,84 +141,32 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl services-section">
     <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-            <h1 class="mb-5">Our Services</h1>
+        <div class="services-section__heading text-center">
+            <p class="services-section__eyebrow">What we offer</p>
+            <h2>Our Services</h2>
         </div>
-        <div class="row g-5">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                        <h5>Global Travel Services</h5>
+        <div class="services-section__grid">
+            <div class="services-section__card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="services-section__icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                        <h3>Global Travel Services</h3>
                         <p>Explore a wide range of global travel options to suit every type of traveler. From group tours to solo adventures, we have something for everyone.</p>
-                    </div>
-                </div>
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                        <h5>Hotel Bookings</h5>
+            <div class="services-section__card wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="services-section__icon"><i class="fa fa-hotel" aria-hidden="true"></i></div>
+                        <h3>Hotel Bookings</h3>
                         <p>Book the best hotels worldwide with us, ensuring top-notch accommodations for your travel comfort and convenience.</p>
-                    </div>
-                </div>
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                        <h5>Experienced Travel Guides</h5>
+            <div class="services-section__card wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="services-section__icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                        <h3>Experienced Travel Guides</h3>
                         <p>Our professional travel guides ensure a unique and educational experience for all your destinations, making your trip more enriching.</p>
-                    </div>
-                </div>
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                        <h5>Event Coordination</h5>
+            <div class="services-section__card wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="services-section__icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                        <h3>Event Coordination</h3>
                         <p>From business meetings to large conferences, we offer comprehensive event management services to ensure seamless execution.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                        <h5>Global Travel Services</h5>
-                        <p>Explore a wide range of global travel options to suit every type of traveler. From group tours to solo adventures, we have something for everyone.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                        <h5>Hotel Bookings</h5>
-                        <p>Book the best hotels worldwide with us, ensuring top-notch accommodations for your travel comfort and convenience.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                        <h5>Experienced Travel Guides</h5>
-                        <p>Our professional travel guides ensure a unique and educational experience for all your destinations, making your trip more enriching.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                        <h5>Event Coordination</h5>
-                        <p>From business meetings to large conferences, we offer comprehensive event management services to ensure seamless execution.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -240,137 +190,120 @@
 </script>
 
   <!-- Destination Start -->
-  <div class="container-xxl py-5 destination" id="destination-section">
+  <div class="container-xxl destinations-section" id="destination-section">
     <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
-            <h1 class="mb-5">Popular Destinations</h1>
+        <div class="destinations-section__heading text-center wow fadeInUp" data-wow-delay="0.1s">
+            <p class="destinations-section__eyebrow">Discover Morocco</p>
+            <h2>Popular Destinations</h2>
         </div>
-        <div class="row g-5">
+        <div class="destinations-section__grid">
             <?php foreach ($destinations as $destination): ?>
-                <div class="col-lg-4 col-md-6">
-                    <a class="position-relative d-block overflow-hidden" href="">
-                        <img class="img-fluid img-size rounded" src="<?= base_url('uploads/' . $destination['images']) ?>" alt="<?= esc($destination['lieu_voyage']) ?>">
+                <div class="destinations-section__card">
+                    <a class="destinations-section__link" href="">
+                        <img class="destinations-section__image" loading="lazy" src="<?= base_url('uploads/' . $destination['images']) ?>" alt="<?= esc($destination['lieu_voyage']) ?>">
+                        <span class="destinations-section__name"><?= esc($destination['lieu_voyage']) ?></span>
                     </a>
                 </div>
             <?php endforeach; ?>
         </div>
     </div>
 </div>
-    <div class="container-xxl py-5" id="trips-section">
+    <div class="container-xxl trips-section" id="trips-section">
     <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Trips</h6>
-            <h1 class="mb-5">Awesome Trips</h1>
+        <div class="trips-section__heading text-center">
+            <p class="trips-section__eyebrow">Plan your escape</p>
+            <h2>Awesome Trips</h2>
         </div>
-        <div class="row g-4 justify-content-center">
+        <div class="trips-section__grid">
             <?php foreach($destinations as $destination): ?>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="package-item">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="<?= base_url('uploads/' . $destination['images']) ?>" alt="<?= esc($destination['lieu_voyage']) ?>">
+            <article class="trips-section__card wow fadeInUp" data-wow-delay="0.1s">
+                <div class="trips-section__image-wrap">
+                    <img class="trips-section__image" loading="lazy" src="<?= base_url('uploads/' . $destination['images']) ?>" alt="<?= esc($destination['lieu_voyage']) ?>">
+                    <?php
+                        $dateDepart = new DateTime($destination['date_depart']);
+                        $dateRetour = new DateTime($destination['date_retour']);
+                        $interval = $dateDepart->diff($dateRetour);
+                        $nbJours = $interval->days; // Calcul du nombre de jours
+                    ?>
+                    <span class="trips-section__duration"><?= $nbJours ?> days</span>
+                </div>
+                <div class="trips-section__content">
+                    <h3><?= esc($destination['lieu_voyage']) ?></h3>
+                    <div class="trips-section__meta">
+                        <span><i class="fa fa-user" aria-hidden="true"></i><?= esc($destination['nbr_max_personnes']) ?> Person</span>
+                        <span><i class="fa fa-calendar-alt" aria-hidden="true"></i><?= $nbJours ?> days</span>
                     </div>
-                    <div class="d-flex border-bottom">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i><?= esc($destination['lieu_voyage']) ?></small>
-                                                <?php
-                            $dateDepart = new DateTime($destination['date_depart']);
-                            $dateRetour = new DateTime($destination['date_retour']);
-                            $interval = $dateDepart->diff($dateRetour);
-                            $nbJours = $interval->days; // Calcul du nombre de jours
-                        ?>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i><?= $nbJours ?> days</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i><?= esc($destination['nbr_max_personnes']) ?> Person</small>
-                    </div>
-                    <div class="text-center p-4">
-                        <h3 class="mb-0"><?= number_format($destination['budget'], 2) ?> DH</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                        </div>
-                        <p><?= esc($destination['description'])?></p>
-                        <div class="d-flex justify-content-center mb-2">
-                            <a href="<?= base_url('book/' . $destination['id']) ?>" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
-                        </div>
+                    <p class="trips-section__description"><?= esc($destination['description'])?></p>
+                    <div class="trips-section__footer">
+                        <p class="trips-section__budget"><span>From</span><?= number_format($destination['budget'], 2) ?> DH</p>
+                        <a href="<?= base_url('book/' . $destination['id']) ?>" class="trips-section__button">Book Now</a>
                     </div>
                 </div>
-            </div>
+            </article>
             <?php endforeach; ?>
         </div>
     </div>
 </div>
    
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <!-- Section Company -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Company</h4>
-                <a class="btn btn-link text-light" href="<?= base_url('about') ?>">About Us</a>
-                <a class="btn btn-link text-light" href="<?= base_url('contact') ?>">Contact Us</a>
-            </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <section class="site-footer__column">
+                    <h2>Company</h2>
+                    <a href="<?= base_url('about') ?>">About Us</a>
+                    <a href="<?= base_url('contact') ?>">Contact Us</a>
+                    <div class="site-footer__contact">
+                        <h2>Contact</h2>
+                        <p><i class="fa fa-map-marker-alt" aria-hidden="true"></i>Agadir, Morocco</p>
+                        <p><i class="fa fa-phone-alt" aria-hidden="true"></i>+212 0709606308</p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i>maryem.toufdra@gmail.com</p>
+                    </div>
+                    <div class="site-footer__socials">
+                        <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://youtube.com/yourprofile" target="_blank" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </section>
 
-            <!-- Section Contact -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Agadir, Morocco</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+212 0709606308</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>maryem.toufdra@gmail.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://youtube.com/yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Gallery</h4>
-                <div class="row g-2 pt-2">
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 1">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 2">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 3">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 4">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 5">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 6">
-                    </div>
-                </div>
-            </div>
+                <section class="site-footer__column">
+                    <h2>Quick Links</h2>
+                    <a href="<?= base_url('home') ?>">Home</a>
+                    <a href="<?= base_url('about') ?>">About Us</a>
+                    <a href="<?= base_url('contact') ?>">Contact Us</a>
+                </section>
 
-            <!-- Section Newsletter -->
-            
-        </div>
-    </div>
+                <section class="site-footer__column">
+                    <h2>Services</h2>
+                    <a href="<?= base_url('service') ?>">Services</a>
+                    <a href="<?= base_url('booking') ?>">Booking</a>
+                    <a href="#destination-section">Destination</a>
+                    <a href="#trips-section">Trips</a>
+                </section>
 
-    <!-- Section Copyright -->
-    <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="<?= base_url('home') ?>">TravelTogether</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!-- Optional footer links or information -->
-                </div>
+                <section class="site-footer__column">
+                    <h2>Gallery</h2>
+                    <div class="site-footer__gallery">
+                        <img loading="lazy" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 1">
+                        <img loading="lazy" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 2">
+                        <img loading="lazy" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 3">
+                        <img loading="lazy" src="<?= base_url('img/package-2.jpg') ?>" alt="Gallery image 4">
+                        <img loading="lazy" src="<?= base_url('img/package-3.jpg') ?>" alt="Gallery image 5">
+                        <img loading="lazy" src="<?= base_url('img/package-1.jpg') ?>" alt="Gallery image 6">
+                    </div>
+                </section>
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="site-footer__copyright">
+            <div class="site-footer__copyright-inner">
+                <span>&copy; <a href="<?= base_url('home') ?>">TravelTogether</a>, All Right Reserved.</span>
+            </div>
+        </div>
+    </footer>
 
     
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?=base_url('assets/lib/wow/wow.min.js')?>"></script>
