@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-//$routes->get('/', 'Accueil::index'); // Définir la route par défaut vers le contrôleur Accueil
+$routes->get('/', 'Accueil::index'); // Définir la route par défaut vers le contrôleur Accueil
 //$routes->get('/accueil', 'Accueil::index'); // Optionnel, pour définir explicitement /accueil
 $routes->get('/login', 'LoginController::index');
 $routes->get('/activity', 'ActivitiesController::index');
@@ -74,6 +74,6 @@ $routes->post('/seconnecter', 'Loginparticipant::seconnecter');
 $routes->get('/update-profile', 'Loginparticipant::updateProfile');
 $routes->post('/update-profile', 'Loginparticipant::updateProfile');
 $routes->post('/contact/submit', 'ContactController::submit');
-$routes->get('contact/afficher', 'ContactController::afficher');
+$routes->get('contact/affiche', 'ContactController::afficher');
 
 

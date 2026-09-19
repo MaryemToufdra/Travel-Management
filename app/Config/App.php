@@ -18,7 +18,7 @@ class App extends BaseConfig
      */
     //public string $baseURL = 'http://localhost/ci/';
   //  public $baseURL = 'http://localhost:8080/ci';
-    public $baseURL = 'http://localhost:8081/travel app web'; // Modifiez 'ci' par le nom de votre projet
+    public $baseURL = 'http://localhost:8081/'; // Modifiez 'ci' par le nom de votre projet
 
 
     /**
@@ -43,7 +43,7 @@ class App extends BaseConfig
      * something else. If you have configured your web server to remove this file
      * from your site URIs, set this variable to an empty string.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------

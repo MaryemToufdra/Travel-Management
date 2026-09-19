@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/lib/animate/animate.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/lib/owlcarousel/assets/owl.carousel.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style1.css') ?>">
     
 </head>
 
