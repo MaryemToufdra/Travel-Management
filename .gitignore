@@ -6,3 +6,4 @@ writable/cache/*
 *.backup
 public/db_test.php
 public/test_apache.php
+gestion_voyage.sql
