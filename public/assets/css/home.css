@@ -392,7 +392,8 @@
     padding: 0.5rem 1rem;
     border: 1px solid var(--auth-teal);
     border-radius: 0.45rem;
-    background: var(--auth-teal);
+    color: var(--auth-teal);
+    background: transparent;
 }
 
 .home-nav-link:hover,
@@ -567,6 +568,10 @@
         gap: 0.35rem;
     }
 
+    .home-nav-actions {
+        margin-top: 0.75rem;
+    }
+
     .home-nav-link,
     .home-auth-link,
     .home-auth-button {
@@ -589,10 +594,6 @@
         position: static;
         float: none;
         margin: 0.25rem 0;
-    }
-
-    .home-profile-dropdown {
-        display: none;
     }
 
     .home-hero {

@@ -65,17 +65,20 @@
                             <a href="/contact" class="home-nav-link">Contact</a>
                         </div>
                         <div class="home-nav-actions">
-                            <a href="<?= base_url('loginP') ?>" class="home-auth-link">Login</a>
-                            <a href="<?= base_url('signup') ?>" class="home-auth-button">Sign up</a>
-                            <div class="home-profile-dropdown dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                    <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="/update-profile" class="dropdown-item">Update Profile</a>
-                                    <a href="loginP" class="dropdown-item">Logout</a>
+                            <?php if (session()->get('isLoggedIn')): ?>
+                                <div class="home-profile-dropdown dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                        <img src="<?= base_url('public/uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a href="/update-profile" class="dropdown-item">Update Profile</a>
+                                        <a href="loginP" class="dropdown-item">Logout</a>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php else: ?>
+                                <a href="<?= base_url('loginP') ?>" class="home-auth-link">Login</a>
+                                <a href="<?= base_url('signup') ?>" class="home-auth-button">Sign up</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
