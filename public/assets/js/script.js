@@ -49,14 +49,35 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
+function setActiveSidebarItem(pathname) {
+	const path = (pathname || window.location.pathname).replace(/\/+$/, '') || '/';
+	const routeById = {
+		dashboard: ['/', '/accueil', '/dashboard'],
+		'trips-link': ['/voyages', '/trips/list'],
+		'activities-link': ['/contact/affiche', '/contact'],
+		account: ['/account'],
+		booking: ['/booking']
+	};
+
+	allSideMenu.forEach(item => {
+		const matchesRoute = (routeById[item.id] || []).includes(path);
+		item.parentElement.classList.toggle('active', matchesRoute);
+		item.classList.toggle('active', matchesRoute);
+	});
+}
+
+setActiveSidebarItem();
+
 allSideMenu.forEach(item=> {
 	const li = item.parentElement;
 
 	item.addEventListener('click', function () {
 		allSideMenu.forEach(i=> {
 			i.parentElement.classList.remove('active');
+			i.classList.remove('active');
 		})
 		li.classList.add('active');
+		item.classList.add('active');
 	})
 });
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
@@ -428,4 +449,3 @@ function confirmationDeleteBook(event, element) {
         });
     }
 }
-

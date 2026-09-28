@@ -71,9 +71,15 @@
                         <div class="home-nav-actions">
                             <?php if (session()->get('isLoggedIn')): ?>
                                 <div class="home-profile-dropdown dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                        <img src="<?= base_url('uploads/default.jpeg') ?>" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
-                                    </a>
+                                    <button type="button" class="home-profile-toggle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?php if (session()->get('profile_image')): ?>
+                                            <img src="<?= base_url('uploads/' . session()->get('profile_image')) ?>" alt="Profile" class="home-profile-avatar">
+                                        <?php elseif (session()->get('username')): ?>
+                                            <span class="home-profile-avatar home-profile-avatar--initial" aria-hidden="true"><?= esc(strtoupper(substr((string) session()->get('username'), 0, 1))) ?></span>
+                                        <?php else: ?>
+                                            <span class="home-profile-avatar home-profile-avatar--icon" aria-hidden="true"><i class="fa fa-user"></i></span>
+                                        <?php endif; ?>
+                                    </button>
                                     <div class="dropdown-menu dropdown-menu-end">
                                         <a href="<?= base_url('update-profile') ?>" class="dropdown-item">Update Profile</a>
                                         <a href="<?= base_url('loginP') ?>" class="dropdown-item">Logout</a>
